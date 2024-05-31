@@ -1,7 +1,6 @@
 from blessed import Terminal
 from rich.markdown import Markdown
 from rich import print as mr_print
-import streamlit as st
 from dotenv import load_dotenv
 import subprocess
 
