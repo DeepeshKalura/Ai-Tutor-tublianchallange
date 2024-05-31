@@ -1,7 +1,15 @@
+import os
 from groq import Groq
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
-def get_sky_response(user_question:str, location:any, client: Groq):
+
+def get_sky_response(user_question:str, location:any):
+    client = Groq(
+        api_key=os.environ.get("GROQ_API_KEY"),
+    )
     detailed_prompt = (
         "You are the expert AI tutor named SKY with extensive knowledge across a wide range of subjects. "
         "Answer the given question comprehensively, using clear and easy-to-understand language. "
